@@ -1,0 +1,53 @@
+
+<h2> CSV File UpLoad - Angular FE</h2>
+
+
+<div>
+<table class="table" style="width : 40%;">
+  <tr>
+  <td>
+            <input type="file"
+                #fileImportInput
+                name="File Upload"
+                id="txtFileUpload"
+                class="btn btn-default"
+                (change)="fileChangeListener($event)"
+                accept=".csv"
+                />
+  </td>
+  <td>
+        <select name="issueCountList" [(ngModel)]="defaultValue">
+         <option  selected value="">Select Issue Count</option>
+         <option *ngFor="let issue of issueCountList" [ngValue]="issue">
+        {{ issue.id }}
+    </option>
+</select>
+        </td>
+        </tr>
+        </table>
+  </div>
+
+
+<div style="width:70%">
+
+<table *ngIf="dataList" class="table table-responsive table-hover" border="1" width="">
+    <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Issue Count</th>
+    <th>Data Of Birth</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let record of dataList | filter : defaultValue">
+            <td> {{record["First name"]}}</td>
+            <td> {{record["Sur name"]}}</td>
+            <td> {{record["Issue count"]}}</td>
+            <td> {{record["Date of birth"]}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+
+
