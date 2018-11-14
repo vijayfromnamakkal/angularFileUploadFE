@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
 
 }
 
+//Function for handling
   fileChangeListener($event): void {
 
     const file = ($event.target.files)[0];
@@ -62,7 +63,7 @@ export class AppComponent implements OnInit {
   }
   }
 
-
+//Function to  remove duplicate issue id for drop down
   setUniqueIssueCount(issueCountArr) {
    let dupRemovedArr =  _.map(
       _.uniq(

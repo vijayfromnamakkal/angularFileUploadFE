@@ -1,5 +1,7 @@
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
+//Filter class for filtering the result based on issue count
+
 @Pipe({
   name: 'filter',
 })
