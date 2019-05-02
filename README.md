@@ -26,6 +26,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ##Application access
 http://localhost:4200
 
-##Updating in loca for conflict
-
-I try what happen
+Removed the conflict
